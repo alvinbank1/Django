@@ -18,7 +18,7 @@ def default_posting():
         # [코드 수정] createsuperuser시 사용자 이름을 admin으로 만들지 않았다면 'admin' 대신 본인 계정의 username을 문자열로 넣어주기
         user_admin = get_object_or_404(get_user_model(), username='admin')
         # 작성자가 admin인 게시글 300개 생성
-        for i in range(1, 2001):
+        for i in range(1, 301):
             Posting.objects.create(
                 title = f'연습용 데이터({i})입니다.',
                 content = f'{i}번 글입니다.',
