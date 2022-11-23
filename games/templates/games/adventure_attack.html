@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/games/game_form.css' %}">
+  <link rel="stylesheet" href="{% static 'css/games/game_adventure.css' %}">
+  {% endblock %}
+
+{% block body %}
+  <div class="adventure">
+    <h1>모험을 떠났습니다.</h1>
+    <p>당신은 '{{random_enemy.name}}'을(를) 만났습니다.</p>
+    
+    <p>
+      <!-- 공격하기 버튼을 누르면 game 앱의 adventure_attack_result url로 이동 -->
+      <form action="{% url 'games:adventure_attack_result' %}" method="post">
+        {% csrf_token %}
+        <!-- value 값으로 랜덤 적의 id를 전달 -->
+        <button type="submit" name="random-enemy" value="{{random_enemy.id}}">공격하기</button>
+      </form>
+    </p>
+  
+    <!-- [미션] 자유롭게 코드 작성 -->
+
+  </div>
+{% endblock %}

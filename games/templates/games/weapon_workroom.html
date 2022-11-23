@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/games/game_form.css' %}">
+  <link rel="stylesheet" href="{% static 'css/games/game_adventure.css' %}">
+  {% endblock %}
+
+{% block body %}
+  <h1>무기 공방</h1>
+  
+  <hr>
+  <p>{{character.nickname}}님의 보유 현황</p>
+  <p>
+    <ul>
+      <li><p>보유 무기 : <span id="weapon__name">{{weapon_name}}</span>&nbsp;(공격력 : +{{weapon_power}})</p></li>
+      <li><p>보유 코인 : {{character.coin}}코인</p></li>
+    </ul>
+  </p>
+  <hr>
+  
+  <!-- [미션] 자유롭게 코드 작성 -->
+  
+{% endblock %}
