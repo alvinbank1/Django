@@ -3,7 +3,7 @@ from .models import Weapon, Character
 
 class WeaponForm(forms.ModelForm):
     name = forms.CharField(label='무기 이름')
-    power = forms.IntegerField(label='무기 공격력')
+    power = forms.IntegerField(label='무기 공격력', max_value=50)
 
     class Meta:
         model = Weapon
