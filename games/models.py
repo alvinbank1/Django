@@ -21,7 +21,7 @@ class Character(models.Model):
         return self.nickname
 
 class Enemy(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
     hp = models.IntegerField()
 
     def __str__(self):
