@@ -44,7 +44,7 @@
   </p>
 
   <p>
-    <a href="{% url 'games:adventure_home' %}">돌아가기</a>
+    <button onclick="goBack()">돌아가기</button>
   </p>
 
   <script>
@@ -55,6 +55,11 @@
     function checkPick() {
       const result = confirm("정말 뽑으시겠습니까?\n500코인이 소모됩니다.");
       return result;
+    }
+
+    function goBack() {
+      const url = "{% url 'games:weapon_workroom' %}";
+      location.replace(url);
     }
   </script>
 {% endblock %}
