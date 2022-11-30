@@ -21,7 +21,7 @@
   
   <!-- [미션] 자유롭게 코드 작성 -->
   <p>
-    <form action="{% comment %}{% url 'games:weapon_pick' %}{% endcomment %}" method="post" onsubmit="return checkPick()">
+    <form action="{% url 'games:weapon_pick' %}" method="post" onsubmit="return checkPick()">
       {% csrf_token %}
       {% if character.coin < 500 %}
         <button type="submit" class="disabled" disabled>무기 뽑기(500코인)</button>
