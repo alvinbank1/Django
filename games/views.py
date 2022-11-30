@@ -52,7 +52,7 @@ def enemy_generate():
         '좀비': 50,
         '공허의 보스': 500,
         "''": 10000,
-        '슈퍼울트라제너레이트멕스얼티메이트마왕보스': 50000,
+        'aa': 50000,
     }
     # enemy_name에는 enemies 딕셔너리의 key 값이 저장됨
     for enemy_name in enemies:
