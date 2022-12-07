@@ -36,7 +36,6 @@ def enemy_generate():
     # 추가하고 싶은 적이 있다면 추가 가능
     # enemies 딕셔너리의 key 값은 적 이름, value 값은 적 hp
     enemies = {
-        '초보': 0,
         '은신 통': 27,
         '매우 작은 슬라임': 1,
         '작은 슬라임': 3,
