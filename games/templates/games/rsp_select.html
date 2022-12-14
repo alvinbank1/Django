@@ -23,9 +23,9 @@
 
   <h3>선택해주세요~</h3>
   <div class="rsp__button">
-    <a href="{% url 'games:rsp_result' '가위' %}">가위</a>
-    <a href="{% url 'games:rsp_result' '바위' %}">바위</a>
-    <a href="{% url 'games:rsp_result' '보' %}">보</a>
+    <button on_click="location.href({% url 'games:rsp_result' '가위' %})">가위</a>
+    <button on_click="location.href({% url 'games:rsp_result' '바위' %})">바위</a>
+    <button on_click="location.href({% url 'games:rsp_result' '보' %})">보</a>
   </div>
   
 {% endblock %}
